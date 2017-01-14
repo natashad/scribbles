@@ -1,0 +1,13 @@
+{% extends 'pastes/base.html' %}
+
+{% block robots_meta %}
+	{% if paste.is_private %}
+		<meta name="robots" content="noindex, nofollow">
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+
+	<pre>{{paste.content}}</pre>
+
+{% endblock %}

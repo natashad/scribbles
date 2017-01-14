@@ -1,0 +1,19 @@
+{% extends 'pastes/base.html' %}
+
+
+{% block page_title %}
+	- New
+{% endblock %}
+
+
+{% block content %}
+
+<form action="{% url 'pastes:save' %}" method="post">
+	{% csrf_token %}
+	<div>
+		<textarea style="width:90%; height:500px;" name="content"></textarea>
+	</div>	
+	<input type="submit" value="Submit" />
+<form>	
+
+{% endblock %}
