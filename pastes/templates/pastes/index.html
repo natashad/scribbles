@@ -12,7 +12,11 @@
 	{% csrf_token %}
 	<div>
 		<textarea style="width:90%; height:500px;" name="content"></textarea>
-	</div>	
+	</div>
+	<input id="isPrivate" type="checkbox" name="isPrivate" /><label for="isPrivate">Set as Private</label>
+	<br />
+	<label for="pwd">Password (Optional)</label> <input type="password" id="pwd" name="pwd" />
+	<br />
 	<input type="submit" value="Submit" />
 <form>	
 
