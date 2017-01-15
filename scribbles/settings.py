@@ -25,7 +25,7 @@ SECRET_KEY = ')co69*$e$#l#3f+x(*81$ba2hu_sizra&x9ph0^)*hi_@_n&gg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.86.200', '198.16.130.131', '127.0.0.1', 'scribbles.natashadalal.ca']
+ALLOWED_HOSTS = ['192.168.86.200', '192.168.86.236', '198.16.130.131', '127.0.0.1', 'scribbles.natashadalal.ca']
 
 
 # Application definition
