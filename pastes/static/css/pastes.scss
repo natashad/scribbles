@@ -1,0 +1,32 @@
+body {
+
+	padding: 20px;
+	background: #EEE;
+
+	.scribbles_logo {
+		font-family: 'Just Another Hand', cursive; 
+		font-size: 80px; 
+		padding: 0; 
+		margin: 0;
+		a {
+			color: #551A8B;
+			text-decoration: underline;
+		}
+	}
+
+	.scribbles_content_box {
+		width: 100%;
+		height: 500px;
+	}
+
+	.form_controls {
+		.fcontrol {
+			margin-top: 5px;
+			font-size: 15px;
+		}
+		.scribbles_submit {
+			margin-top: 10px;
+		}
+	}
+
+}

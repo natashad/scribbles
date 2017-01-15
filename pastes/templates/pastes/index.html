@@ -11,13 +11,20 @@
 <form action="{% url 'pastes:save' %}" method="post">
 	{% csrf_token %}
 	<div>
-		<textarea style="width:90%; height:500px;" name="content"></textarea>
+		<textarea class="scribbles_content_box" name="content"></textarea>
 	</div>
-	<input id="isPrivate" type="checkbox" name="isPrivate" /><label for="isPrivate">Set as Private</label>
-	<br />
-	<label for="pwd">Password (Optional)</label> <input type="password" id="pwd" name="pwd" />
-	<br />
-	<input type="submit" value="Submit" />
+
+	<div class="form_controls">
+		<div class="fcontrol">
+			<input id="isPrivate" type="checkbox" name="isPrivate" /> <label for="isPrivate">Set as Private</label>
+		</div>	
+		<div class="fcontrol">
+			<label for="pwd">Password (Optional):</label> <input type="password" id="pwd" name="pwd" />
+		</div>
+		<div class="fcontrol">
+			<input type="submit" value="Submit" class="scribbles_submit btn btn-primary" />
+		</div>	
+	</div>
 <form>	
 
 {% endblock %}
