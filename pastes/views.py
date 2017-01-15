@@ -1,4 +1,4 @@
-import secrets
+import uuid
 
 from django.shortcuts import render, get_object_or_404
 from django.http import Http404, HttpResponse, HttpResponseRedirect
@@ -11,9 +11,11 @@ def index(request):
     return render(request, 'pastes/index.html', context)
 
 def save(request):
-    token = secrets.token_urlsafe(20)
+    uid = uuid.uuid4()
+    token = uid.hex
     while Paste.objects.filter(token=token).exists():
-        token = secrets.token_urlsafe(20)
+        uid = uuid.uuid4()
+        token = uid.hex
 
     posted_content = request.POST['content']
     p = Paste(content=posted_content, pub_date=timezone.now(), is_private=True, token=token)
