@@ -8,6 +8,10 @@
 
 {% block content %}
 
+	<div class="permalink">
+		Permalink: <a href="/show/{{paste.token}}" alt="Permalink" />{{request.META.HTTP_HOST}}/show/{{paste.token}}</a>
+	</div>
+
 	<pre>{{paste.content}}</pre>
 
 {% endblock %}

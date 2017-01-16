@@ -20,5 +20,7 @@ body {
     font-size: 15px; }
   body .form_controls .scribbles_submit {
     margin-top: 10px; }
+  body div.permalink {
+    margin-bottom: 10px; }
 
 /*# sourceMappingURL=pastes.css.map */
