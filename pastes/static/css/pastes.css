@@ -22,5 +22,7 @@ body {
     margin-top: 10px; }
   body div.permalink {
     margin-bottom: 10px; }
+  body .error {
+    color: red; }
 
 /*# sourceMappingURL=pastes.css.map */

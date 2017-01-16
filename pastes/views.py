@@ -35,11 +35,11 @@ def save(request):
 
     return HttpResponseRedirect('show/' + token)
 
-def show(request, token):     
+def show(request, token, authFailure=False):     
     paste = get_object_or_404(Paste, pk=token)
 
     if len(paste.password) > 0:
-        context = {'token': token}
+        context = {'token': token, 'authFailure': authFailure}
         return render(request, 'pastes/password_protected.html', context)
     
     return show_without_password_check(request, paste)
@@ -57,7 +57,7 @@ def authenticate(request):
     if bcrypt.hashpw(password, paste.password) == paste.password:
         return show_without_password_check(request, paste)
 
-    return show(request, token)
+    return show(request, token, authFailure=True)
 
 
 
