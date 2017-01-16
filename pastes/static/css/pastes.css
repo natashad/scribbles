@@ -24,5 +24,8 @@ body {
     margin-bottom: 10px; }
   body .error {
     color: red; }
+  body pre {
+    white-space: pre-wrap;
+    word-break: break-word; }
 
 /*# sourceMappingURL=pastes.css.map */
