@@ -35,8 +35,12 @@ def save(request):
 
     return HttpResponseRedirect('show/' + token)
 
-def show(request, token, authFailure=False):     
-    paste = get_object_or_404(Paste, pk=token)
+def show(request, token, authFailure=False):  
+
+    try:   
+        paste = Paste.objects.get(pk=token)
+    except Paste.DoesNotExist:
+        return render(request, 'pastes/no_such_paste.html')
 
     if len(paste.password) > 0:
         context = {'token': token, 'authFailure': authFailure}
